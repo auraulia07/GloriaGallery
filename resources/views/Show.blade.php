@@ -13,7 +13,7 @@
     </div>
     <br><br>
     <section class="gallery">
-        <div class="container ">
+        <div class="container">
             <div class="row">
                 <div class="card">
                     <div class="card-body">

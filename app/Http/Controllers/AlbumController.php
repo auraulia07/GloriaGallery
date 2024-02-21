@@ -8,7 +8,7 @@ class AlbumController extends Controller
 {
     public function index()
     {
-        $albums = Album::latest()->paginate(5);
+        $albums = Album::latest()->simplePaginate();
 
         return view('auth.album.index', compact('albums'))
             ->with('i', (request()->input('page', 1) - 1) * 5);

@@ -48,9 +48,11 @@
                 </td>
             </tr>
         @endforeach
+
     </table>
 
-    {!! $albums->links() !!}
+    <!-- {!! $albums->links() !!} -->
+
 
 
 @endsection

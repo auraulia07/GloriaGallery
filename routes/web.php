@@ -20,10 +20,11 @@ use App\Http\Controllers\LikeController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 Route::resource('/', Controller::class);
+
     
 Route::controller(LoginRegisterController::class)->group(function () {
     Route::get('/register', 'register')->name('register');

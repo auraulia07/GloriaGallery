@@ -43,7 +43,7 @@
         </div>
     </div>
 
-    {!! $fotos->links() !!}
+    <!-- {!! $fotos->links() !!} -->
 
 
 @endsection

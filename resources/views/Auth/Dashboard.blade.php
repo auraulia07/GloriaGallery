@@ -51,15 +51,19 @@
                                 </button>
                             </form>
                             <div>
-                        <a href="comments/{{ $foto->id }}/show"><button class="btn btn-primary"  type="button"><i class="bi bi-chat"></i></button></a>
+                        <a href="comments/{{ $foto->id }}/show"><button class="btn btn-primary"  type="button"><i class="bi bi-chat"></i>{{ $foto->comments()->count() }}</button></a>
 </div>
                     </div>
                     </div>
                 </div>
             </div>
             @endforeach
+            
         </div>
+        {!! $fotos->links() !!}
 </div>
+
+
 <script src="{{ asset('template/js/script.js') }}"></script>
 
 @endsection

@@ -15,7 +15,7 @@ class FotoController extends Controller
      */
     public function index()
     {
-        $fotos = Foto::latest()->where('user_id', auth()->id())->paginate(100);
+        $fotos = Foto::latest()->where('user_id', auth()->id())->simplePaginate();
         return view('auth.foto.index', compact('fotos'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }

@@ -14,7 +14,7 @@ class Controller extends BaseController
     use AuthorizesRequests, ValidatesRequests;
     public function index()
     {
-        $fotos = Foto::latest()->paginate(5);
+        $fotos = Foto::latest()->simplePaginate();
         return view('welcome', compact('fotos'))->with('i', (request()->input('page', 1) - 1) * 5);
     }
 

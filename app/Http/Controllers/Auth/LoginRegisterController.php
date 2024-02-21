@@ -104,7 +104,7 @@ class LoginRegisterController extends Controller
     public function dashboard()
     {
         if (Auth::check()) {
-            $fotos = Foto::latest()->paginate(5);
+            $fotos = Foto::latest()->simplePaginate();
             return view('auth.dashboard', compact('fotos'))->with('i', (request()->input('page', 1) - 1) * 5);
         }
 
